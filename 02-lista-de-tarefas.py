@@ -61,18 +61,25 @@ while True:
     opcao = input("Escolha uma opção: ")
 
     if opcao == "1":
+        print("Mostrando todas as tarefas. . .")
         mostrar_todas()
     elif opcao == "2":
+        print("Mostrando apenas tarefas concluídas. . .")
         mostrar_concluidas()
     elif opcao == "3":
+        print("Mostrando apenas tarefas pendentes. . .")
         mostrar_pendentes()
     elif opcao == "4":
+        print("Mostrando tarefas pro prioridade. . . ")
         mostrar_prioridade()
     elif opcao == "5":
+        print("Cadastrando nova tarefa. . .")
         cadastrar_tarefa()
     elif opcao == "6":
+        print("Finalizando tarefa. . .")
         finalizar_tarefa()
     elif opcao == "7":
+        print("Removendo tarefa. . .")
         remover_tarefa()
     elif opcao == "0":
         print("Saindo. . .")
