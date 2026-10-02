@@ -9,36 +9,48 @@
 # 0. Sair
 
 tarefas = [
-    {"titulo":"estudar", "concluida":"sim", "prioridade":"media"},
-    {"titulo":"trabalhar", "concluida":"nao", "prioridade":"alta"},
-    {"titulo":"ler", "concluida":"nao", "prioridade":"baixa"}
+    {"titulo":"estudar", "concluida":"[X]", "prioridade":"media"},
+    {"titulo":"trabalhar", "concluida":"[ ]", "prioridade":"alta"},
+    {"titulo":"ler", "concluida":"[ ]", "prioridade":"baixa"}
 ]
 
-def mostrar_todas():
+def mostrar():
     for tarefa in tarefas:
-        print(tarefa)
+        print()
+        print(f"{tarefa["concluida"]} {tarefa["titulo"]} | {tarefa["prioridade"]}")
+        print()
+
+# def mostrar_todas():
+#     for tarefa in tarefas:
+#         print(tarefa)
 
 def mostrar_concluidas():
     for tarefa in tarefas:
-        if tarefa["concluida"] == "sim":
-            print(tarefa)
+        if tarefa["concluida"] == "[X]":
+            print()
+            print(f"{tarefa["concluida"]} {tarefa["titulo"]} | {tarefa["prioridade"]}")
+            print()
 
 def mostrar_pendentes():
     for tarefa in tarefas:
-        if tarefa["concluida"] == "nao":
-            print(tarefa)
+        if tarefa["concluida"] == "[ ]":
+            print()
+            print(f"{tarefa["concluida"]} {tarefa["titulo"]} | {tarefa["prioridade"]}")
+            print()
 
 def mostrar_prioridade():
     escolha = input("Você quer ver as tarefas com prioridade:\naltissima, alta, media ou baixa?\n")
     for tarefa in tarefas:
         if tarefa["prioridade"] == escolha:
-            print(tarefa)
-
+            print()
+            print(f"{tarefa["concluida"]} {tarefa["titulo"]} | {tarefa["prioridade"]}")
+            print()
+           
 def finalizar_tarefa():
     finalizar = input("Digite a tarefa que você dseja finalizar\n")
     for tarefa in tarefas:
         if tarefa["titulo"] == finalizar:
-            tarefa["concluida"] = "sim"
+            tarefa["concluida"] = "[X]"
 
 def remover_tarefa():
         remover = input("Digite o nome da tarefa que deseja remover\n")
@@ -49,7 +61,7 @@ def remover_tarefa():
 
 def cadastrar_tarefa():
     titulo_tarefa_nova = input("Digite o título da nova tarefa\n")
-    situacao_tarefa_nova = input("Digite a se a nova tarefa está ou não concluída (sim ou nao)\n")
+    situacao_tarefa_nova = input("Digite a se a nova tarefa está ou não concluída ([X] ou [ ])\n")
     prioridade_tarefa_nova = input("Digite a prioridade da nova tarefa (altissima, alta, media ou baixa)\n")
 
     tarefas.append({"titulo":titulo_tarefa_nova, "concluida":situacao_tarefa_nova, "prioridade":prioridade_tarefa_nova})
@@ -62,7 +74,7 @@ while True:
 
     if opcao == "1":
         print("Mostrando todas as tarefas. . .")
-        mostrar_todas()
+        mostrar()
     elif opcao == "2":
         print("Mostrando apenas tarefas concluídas. . .")
         mostrar_concluidas()
