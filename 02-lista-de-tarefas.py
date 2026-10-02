@@ -11,7 +11,8 @@
 tarefas = [
     {"titulo":"estudar", "concluida":"[X]", "prioridade":"media"},
     {"titulo":"trabalhar", "concluida":"[ ]", "prioridade":"alta"},
-    {"titulo":"ler", "concluida":"[ ]", "prioridade":"baixa"}
+    {"titulo":"ler", "concluida":"[ ]", "prioridade":"baixa"},
+    {"titulo":"ver a namorada", "concluida":"[ ]", "prioridade":"altissima"}
 ]
 
 def mostrar():
