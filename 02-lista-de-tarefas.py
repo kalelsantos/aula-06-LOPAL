@@ -61,7 +61,7 @@ def remover_tarefa():
 
 def cadastrar_tarefa():
     titulo_tarefa_nova = input("Digite o título da nova tarefa\n")
-    situacao_tarefa_nova = input("Digite a se a nova tarefa está ou não concluída ([X] ou [ ])\n")
+    situacao_tarefa_nova = input("Digite a se a nova tarefa está ou não concluída ( [X] ou [ ] )\n")
     prioridade_tarefa_nova = input("Digite a prioridade da nova tarefa (altissima, alta, media ou baixa)\n")
 
     tarefas.append({"titulo":titulo_tarefa_nova, "concluida":situacao_tarefa_nova, "prioridade":prioridade_tarefa_nova})
